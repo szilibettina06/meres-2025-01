@@ -4,8 +4,11 @@
  */
 package kalapacsvetes;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -14,19 +17,32 @@ import java.util.Scanner;
  */
 public class Kalapacsvetes {
 
-    public static void main(String[] args) {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws FileNotFoundException {
         try {
             File sportolokFile = new File("kalapacsvetes.txt");
             Scanner readTxt = new Scanner(sportolokFile);
             while (readTxt.hasNextLine()) {
                 String data = readTxt.nextLine();
                 System.out.println(data);
+                
             }
-            readTxt.close();
+             readTxt.close();
+            System.out.println("A dobások eredménye: " +sportolokFile.length()); 
+           
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Nincs adat.");
             e.printStackTrace();
         }
+        
+                  
+        
+
+        
+
+       
 
     }
 }
