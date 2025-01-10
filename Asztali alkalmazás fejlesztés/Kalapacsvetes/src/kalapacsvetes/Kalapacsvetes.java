@@ -27,6 +27,7 @@ public class Kalapacsvetes {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws FileNotFoundException {
+      
        // 3. Fájl beolvasása
         try (BufferedReader br = Files.newBufferedReader(Paths.get("kalapacsvetes.txt"))) {
             // Az első sor az oszlopok neve, azt kihagyjuk
