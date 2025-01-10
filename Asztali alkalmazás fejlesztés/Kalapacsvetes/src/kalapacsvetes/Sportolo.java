@@ -6,6 +6,18 @@ package kalapacsvetes;
 
 public class Sportolo {
 
+    static void add(Sportolo sportolo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static String size() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+
+    
+
     private Integer Helyezes;
     private Integer Eredmeny;
     private String Sportolo;
@@ -71,5 +83,10 @@ public class Sportolo {
 
     public Integer setDatum() {
         return Datum;
+    }
+    
+    @Override
+    public String toString() {
+        return Helyezes + ";" + Eredmeny + ";" + Sportolo + ";" + Orszagkod + ";" + Helyszin + ";" + Datum;
     }
 }
