@@ -26,11 +26,11 @@ public class Kalapacsvetes {
             Scanner readTxt = new Scanner(sportolokFile);
             while (readTxt.hasNextLine()) {
                 String data = readTxt.nextLine();
-                System.out.println(data);
-                
+                System.out.println(data.length());
+                System.out.println("A dobások eredménye: " +data.length()); 
             }
              readTxt.close();
-            System.out.println("A dobások eredménye: " +sportolokFile.length()); 
+            
            
         } catch (FileNotFoundException e) {
             System.out.println("Nincs adat.");
